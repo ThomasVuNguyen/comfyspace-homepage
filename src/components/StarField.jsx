@@ -183,7 +183,7 @@ export function StarField({ className }) {
       fill="white"
       aria-hidden="true"
       className={clsx(
-        'pointer-events-none absolute w-220.25 origin-top-right rotate-30 overflow-visible opacity-70',
+        'pointer-events-none absolute w-220.25 origin-top-right rotate-30 overflow-visible opacity-40',
         className,
       )}
     >

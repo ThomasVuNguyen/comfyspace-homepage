@@ -43,43 +43,69 @@ function XIcon(props) {
 export function Intro() {
   return (
     <>
-      <div>
-        <Link href="/">
-          <Logo className="inline-block h-8 w-auto" />
+      <div className="relative">
+        <Link href="/" className="group block">
+          <div className="relative">
+            <img 
+              src="/thomas.png" 
+              alt="Thomas the Maker" 
+              className="h-24 w-24 rounded-2xl object-cover shadow-lg ring-4 ring-white/10 transition-all duration-300 group-hover:scale-105 group-hover:ring-green-400/30"
+            />
+
+          </div>
         </Link>
       </div>
-      <h1 className="mt-14 font-display text-4xl/tight font-light text-white">
-        Open-source Git client{' '}
-        <span className="text-sky-300">for macOS minimalists</span>
-      </h1>
-      <p className="mt-4 text-sm/6 text-gray-300">
-        Commit is a lightweight Git client you can open from anywhere any time
-        you’re ready to commit your work with a single keyboard shortcut. It’s
-        fast, beautiful, and completely unnecessary.
-      </p>
-      <SignUpForm />
-      <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
-        <IconLink href="#" icon={BookIcon} className="flex-none">
-          Documentation
-        </IconLink>
-        <IconLink href="#" icon={GitHubIcon} className="flex-none">
-          GitHub
-        </IconLink>
-        <IconLink href="/feed.xml" icon={FeedIcon} className="flex-none">
-          RSS
-        </IconLink>
+      
+      <div className="mt-8 space-y-4">
+        <div className="space-y-2">
+          <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white">
+            Hey there! 👋
+          </h1>
+          <h2 className="font-display text-2xl sm:text-3xl font-medium text-green-400">
+            I&apos;m Thomas the Maker
+          </h2>
+        </div>
+        
+        <p className="text-base sm:text-lg text-gray-300 font-medium leading-relaxed max-w-md">
+          I turn <span className="text-green-400 font-semibold">wild ideas</span> into 
+          <span className="text-blue-400 font-semibold"> real things</span> that people actually use. 
+          <br />
+          <span className="text-gray-400 text-sm sm:text-base mt-2 block">
+            Here&apos;s some cool stuff I&apos;ve built →
+          </span>
+        </p>
+
+        <div className="flex flex-wrap gap-2 pt-2">
+          <span className="inline-flex items-center rounded-full bg-green-400/10 px-3 py-1 text-sm font-medium text-green-400 ring-1 ring-green-400/20">
+            ⚡ Maker
+          </span>
+          <span className="inline-flex items-center rounded-full bg-blue-400/10 px-3 py-1 text-sm font-medium text-blue-400 ring-1 ring-blue-400/20">
+            🎯 Builder
+          </span>
+          <span className="inline-flex items-center rounded-full bg-purple-400/10 px-3 py-1 text-sm font-medium text-purple-400 ring-1 ring-purple-400/20">
+            🧠 Innovator
+          </span>
+        </div>
       </div>
+      
+      {/* Commented out email updates form */}
+      {/* <SignUpForm /> */}
     </>
   )
 }
 
 export function IntroFooter() {
   return (
-    <p className="flex items-baseline gap-x-2 text-[0.8125rem]/6 text-gray-500">
-      Brought to you by{' '}
-      <IconLink href="#" icon={XIcon} compact>
-        Joe Davola
+    <div className="flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
+      <IconLink href="https://www.youtube.com/@thomasthemaker" icon={BookIcon} className="flex-none">
+        YouTube
       </IconLink>
-    </p>
+      <IconLink href="https://github.com/ThomasVuNguyen" icon={GitHubIcon} className="flex-none">
+        GitHub
+      </IconLink>
+      <IconLink href="mailto:thomas@billullonex.com" icon={FeedIcon} className="flex-none">
+        Email
+      </IconLink>
+    </div>
   )
 }
